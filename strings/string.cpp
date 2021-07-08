@@ -43,5 +43,9 @@ int main()
     cout<<x<<endl;
     cout<<sizeof(x)<<endl;
     cout << typeid(x).name() << endl;
+    cout<<to_string(x)+"25"<<endl; // convert int into string
+    string new_str="kjd iuhgfj dihg njiudfhgni";
+    sort(new_str.begin(),new_str.end()); // to sort a string in alphabetical-numerical-character preference order.
+    cout<<new_str<<endl;
     return 0;
 }
