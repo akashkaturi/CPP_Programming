@@ -22,13 +22,14 @@ int main()
     int counter=0;
     while(counter<n){
         for(i=0;i<n-counter;i++){ // this is because for every iteration the last element(max element) is placed correctly in its position 
-                if(arr[j]>arr[j+1]) // i.e max element is bubbled out from the list and placed at its correct position. so this sort is called bubble sort.
+                if(arr[i]>arr[i+1]) // i.e max element is bubbled out from the list and placed at its correct position. so this sort is called bubble sort.
                 {
-                int temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
+                int temp=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;
                 }
             }
+        counter+=1;
     }
     for(i=0;i<n;i++){
         cout<<arr[i]<<" ";
