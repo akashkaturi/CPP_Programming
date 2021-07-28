@@ -120,7 +120,20 @@ node* reverseRecursive(node* &head){
         }
         return prevptr;
     }
+// detection and removal of cycle in linked list
 
+bool cycle(node* &head){
+    node* slow=head;
+    node* fast=head;
+    while(fast!=NULL && fast->next!=NULL){
+        slow=slow->next;
+        fast=fast->next->next;
+        if(slow==fast){
+            return true;
+        }
+    }
+    return false;
+}
 int main()
 {   
     node* head=NULL;
@@ -141,6 +154,7 @@ int main()
     int k=2;
     node* newhead_reversek=reverseK(head,k);
     display(newhead_reversek);
+    
 
 
 
