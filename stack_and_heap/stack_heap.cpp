@@ -5,7 +5,8 @@ using namespace std;
 int main()
 {
     int a=10; //stored in stack.
-    int *p= new int(); //stored in heap.
+    int *p= new int(); 
+    //stored in heap.
     // p is stored i.e address of p is stored in stack as memory address and it points to address in heap.
     *p=20; //referencing and initializing the value of p in heap
     cout<<p<<endl;

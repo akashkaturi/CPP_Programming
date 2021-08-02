@@ -16,6 +16,7 @@ void insertAthead(node* &head,int val){
     head=n;
 }   
 
+
 void insertAtTail(node* &head,int val){
     if(head==NULL){
         insertAthead(head,val);

@@ -14,10 +14,10 @@ bool ratinMaze(int** arr,int x,int y,int n,int** solArr){
     }
     if(isSafe(arr,x,y,n)){
         solArr[x][y]=1;
-        if(ratinMaze(arr,x+1,y,n,solArr)){
+        if(ratinMaze(arr,x+1,y,n,solArr)){//check bottom row
             return true;
         }
-        if(ratinMaze(arr,x,y+1,n,solArr)){
+        if(ratinMaze(arr,x,y+1,n,solArr)){// check right column
             return true;
         }
         solArr[x][y]=0; //backtracking
