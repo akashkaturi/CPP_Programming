@@ -1,0 +1,20 @@
+Infix:  <operand> <operator> <operand>
+4 * 2 + 3
+prefix:(polish notation) <operator> <operand> <operand>
+
++ * 4 2 3
+
+postfix: (reverse polish notation) <operand> <operand> <operator>
+4 2 * 3 +
+
+infix:
+5 - 6 / 3
+prefix: (polish notation)
+- 5 / 6 3
+postfix:
+5 6 3 / -
+precedence:
+1. ()
+2. ^   associativity(right to left)
+3. *,/ associativity(left to right)
+4. +,- associativity(left to right)

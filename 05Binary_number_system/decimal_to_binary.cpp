@@ -5,10 +5,10 @@ int main()
 { // base 2 - binary numbers
     //45 = 32 + 0+ 8 + 4 + 0 + 1 ( 1 0 1 1 0 1)
 //Convert Decimal to binary
-    int n=42;
+    int n=45;
     int i,arr[10];
     for(i=0;n>0;i++){
-        arr[i]=n%2;
+        arr[i]=n%2;  //just add the remainders into single array and that will be enough
         n=n/2;
     }
     for(i=i-1;i>=0;i--){

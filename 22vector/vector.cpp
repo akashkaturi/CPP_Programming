@@ -11,7 +11,7 @@ int main()
         cout<<v[i]<<endl;
     }
     vector<int>::iterator it;
-    for(it=v.begin();it!=v.end();i++){
+    for(it=v.begin();it!=v.end();it++){
         cout<<*it<<endl;
     }
 
