@@ -17,7 +17,7 @@ int main()
     //         arr[j]=arr[j+1];
     //         arr[j+1]=temp;
     //         }
-    //     }
+    //     } 
     // }
     int counter=0;
     while(counter<n){

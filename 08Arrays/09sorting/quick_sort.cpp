@@ -16,7 +16,7 @@ int partition(int arr[], int l, int r)  //integer function because it returns th
         if(arr[j]<pivot)   // all elements less than pivot will remain as it is
         {
             i++;
-            swap(arr,i,j); // so if (if) condition fails, i doesnot iterate until if find a element that is less than pivot
+            swap(arr,i,j); // so if (if) condition fails, i doesnot iterate until if finds a element that is less than pivot
                             // whenever the jth element is less than pivot then the ith element(which stopped before 1 or few iterations back)
                             // will be swapped with jth element.
                             // THE swapping takes place until the ith element is the last element that is less than pivot.
