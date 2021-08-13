@@ -1,3 +1,4 @@
+#%%
 def num(k,one,zero):
     l=[3,4]
     n=int(k)
