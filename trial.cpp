@@ -1,44 +1,60 @@
+// // #include <iostream>
+// // #include<stack>
+// // #include <bits/stdc++.h>
+// // using namespace std;
+// // int main()
+// // {   int n;
+// //     stack<int> st;
+// //     while(true){
+// //         st.push(n);
+// //     }
+// //     return 0;
+// // }
+// #include <cmath>
+// #include <cstdio>
+// #include <vector>
 // #include <iostream>
-// #include<stack>
-// #include <bits/stdc++.h>
+// #include <algorithm>
 // using namespace std;
+
 // int main()
-// {   int n;
-//     stack<int> st;
-//     while(true){
-//         st.push(n);
-//     }
+// {
+//     // long int N, K, p, q, sum, i, j, max = 0, x = 0;
+
+//     // cin >> N >> K;
+//     // long int *a = new long int[N + 1]();
+
+//     // for (i = 0; i < K; i++)
+//     // {
+//     //     cin >> p >> q >> sum;
+//     //     a[p] += sum;
+//     //     if ((q + 1) <= N)
+//     //         a[q + 1] -= sum;
+//     // }
+
+//     // for (i = 1; i <= N; i++)
+//     // {
+//     //     x = x + a[i];
+//     //     if (max < x)
+//     //         max = x;
+//     // }
+
+//     // cout << max;
+
+//     int k = 19;
+
+//     int l = 18;
+//     cout << k & l;
 //     return 0;
 // }
-#include <cmath>
-#include <cstdio>
-#include <vector>
 #include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    long int N, K, p, q, sum, i, j, max = 0, x = 0;
-
-    cin >> N >> K;
-    long int *a = new long int[N + 1]();
-
-    for (i = 0; i < K; i++)
-    {
-        cin >> p >> q >> sum;
-        a[p] += sum;
-        if ((q + 1) <= N)
-            a[q + 1] -= sum;
-    }
-
-    for (i = 1; i <= N; i++)
-    {
-        x = x + a[i];
-        if (max < x)
-            max = x;
-    }
-
-    cout << max;
+    int k = 16;
+    int j=15;
+    int l = k & j;
+    cout << l << endl;
     return 0;
 }
