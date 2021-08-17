@@ -10,15 +10,7 @@ int main()
         cin>>arr[i];
     }
    
-    // for(i=0;i<n-1;i++){
-    //     for(j=0;j<n-1;j++){
-    //         if(arr[j]>arr[j+1]){
-    //         int temp=arr[j];
-    //         arr[j]=arr[j+1];
-    //         arr[j+1]=temp;
-    //         }
-    //     } 
-    // }
+
     int counter=0;
     while(counter<n){
         for(i=0;i<n-counter;i++){ // this is because for every iteration the last element(max element) is placed correctly in its position 
