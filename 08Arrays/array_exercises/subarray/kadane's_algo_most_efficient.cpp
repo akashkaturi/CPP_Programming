@@ -6,21 +6,17 @@ int main()
 {
     int n;
     cin >> n;
-    int arr[n];
+    int nums[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        cin >> nums[i];
     }
     int currsum = 0;
     int max_sum = INT_MIN;
     for (int i = 0; i < n; i++)
     {
-        currsum += arr[i];
-        if (currsum < 0)
-        {
-            currsum = 0;
-        }
-        max_sum = (currsum, currsum);
+        currsum = max(nums[i], currsum + nums[i]);
+        max_sum = max(max_sum, currsum);
     }
     cout << max_sum << endl;
 

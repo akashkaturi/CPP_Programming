@@ -53,7 +53,7 @@ int alter(string s)
     char comp = s[0];
     while (i < s.length() && j < s.length())
     {
-        if (s[j] == comp)
+        if (s[j] >= comp)
         {
             count++;
             j++;
@@ -64,6 +64,8 @@ int alter(string s)
             comp = s[i];
             j++;
         }
+        
+        
     }
     return count;
 }

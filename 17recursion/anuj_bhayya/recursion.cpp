@@ -14,6 +14,8 @@ int power_of_n(int n,int p){
     return n*power_of_n(n,p-1);
 
     /*
+
+    
     3^4= 3* 3^3
     which is equal to 
     a^b=a* a^b-1
