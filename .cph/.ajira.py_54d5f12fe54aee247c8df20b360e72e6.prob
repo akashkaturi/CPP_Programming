@@ -1,0 +1,1 @@
+{"name":"Local: ajira","url":"/home/akash/Documents/100days of coding/cpp_programming/ajira.py","tests":[{"id":1630306012989,"input":"101 8 7\n21 3\n12 2\n8 1\n8 0\n17 2\n20 4\n25 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/akash/Documents/100days of coding/cpp_programming/ajira.py","group":"local","local":true}

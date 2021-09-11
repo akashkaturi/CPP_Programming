@@ -12,43 +12,50 @@ bool check(string s)
         {
             st.push(s[i]);
         }
-       else if(!st.empty())
-       {
-           if(s[i]==')'){
-               if(st.top()=='('){
-                   st.pop();
-               }
-               else{
-                   break;
-               }
-           }
-           else if (s[i] == ']')
-           {
-               if (st.top() == '[')
-               {
-                   st.pop();
-               }
-               else{
-                   break;
-               }
-           }
-           else if (s[i] == '}')
-           {
-               if (st.top() == '{')
-               {
-                   st.pop();
-               }
-               else{
-                   break;
-               }
-           }
-           else{
-               return 0;
-           }
-       }
-       else{
-           st.push(s[i]);
-       }
+        else if (!st.empty())
+        {
+            if (s[i] == ')')
+            {
+                if (st.top() == '(')
+                {
+                    st.pop();
+                }
+                else
+                {
+                    break;
+                }
+            }
+            else if (s[i] == ']')
+            {
+                if (st.top() == '[')
+                {
+                    st.pop();
+                }
+                else
+                {
+                    break;
+                }
+            }
+            else if (s[i] == '}')
+            {
+                if (st.top() == '{')
+                {
+                    st.pop();
+                }
+                else
+                {
+                    break;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        else
+        {
+            st.push(s[i]);
+        }
     }
     return st.empty();
 }

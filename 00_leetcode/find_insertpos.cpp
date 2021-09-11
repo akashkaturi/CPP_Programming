@@ -1,10 +1,12 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+int search(vector<int> &v,int target){
+    int 
+}
 int main()
 {
-    fork();
-    cout << "hi";
+
     return 0;
 }
 
