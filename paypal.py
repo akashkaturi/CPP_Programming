@@ -1,3 +1,4 @@
+#%%
 def num(k,one,zero):
     l=[3,4]
     n=int(k)
@@ -26,3 +27,19 @@ for i in range(len(l)):
         one.append(out[0])
         zero.append(out[1])
         print(out[0])
+#%%
+def minimumSwaps(arr):
+   
+    swap = 0
+    
+    i =0
+    while i < len(arr):
+        index = arr[i] -1
+        if arr[i] != arr[index]:
+            arr[i],arr[index] = arr[index] , arr[i]
+            swap +=1
+        else:
+            i+=1
+    return swap
+minimumSwaps([1,4,2,3,5])
+# %%
