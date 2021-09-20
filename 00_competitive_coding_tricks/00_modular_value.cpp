@@ -1,18 +1,17 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-void print(map<char, int> &m)
-{
-}
+const int M = 1e9 + 7;
 int main()
 {
-    unordered_map<char, int> m;
-    int n;
+    
+    int n = 0;
     cin >> n;
-    for (int i = 0; i < n; i++)
-    {
-        
+    long long fact = 1;
+    for (int i = 2;i<n;i++) {
+        fact = (fact * i)%M;
     }
+    cout << fact<<endl;
     return 0;
 }
 
