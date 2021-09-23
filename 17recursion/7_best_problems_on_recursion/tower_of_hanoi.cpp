@@ -1,18 +1,19 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-void towerofHanoi(int n,char src, char dest, char helper){
-    
-    if(n==0){
+void towerofHanoi(int n, char src, char dest, char helper)
+{
+    if (n == 0)
+    {
         return;
     }
-    towerofHanoi(n-1,src,helper,dest);
-    cout<<"Move from "<<src<<" to "<<dest<<endl;
-    towerofHanoi(n-1,helper,dest,src);
+    towerofHanoi(n - 1, src, helper, dest);
+    cout << "Move from " << src << " to " << dest << endl;
+    towerofHanoi(n - 1, helper, dest, src);
 }
 int main()
 {
-    towerofHanoi(2,'A','C','B');
-    
+    towerofHanoi(5, 'A', 'C', 'B');
+
     return 0;
 }

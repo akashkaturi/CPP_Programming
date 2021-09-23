@@ -2,6 +2,9 @@
 #include<bits/stdc++.h>
 #include<string.h>
 using namespace std;
+string hello(){
+    return "Hello World";
+}`
 void merge(int arr[], int l, int mid, int r)
 {
     int n1=mid-l+1;

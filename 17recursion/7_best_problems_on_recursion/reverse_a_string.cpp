@@ -1,20 +1,25 @@
-#include<iostream>
-#include<bits/stdc++.h>
-#include<string.h>
+#include <iostream>
+#include <bits/stdc++.h>
+#include <string.h>
 using namespace std;
-void reverse(string a){
-    if(a.length()==0){
+void reverse(string s)
+{
+    if (s.length() == 0)
+    {
         return;
     }
-    string ros=a.substr(1);
-    reverse(ros);
-    cout<<a[0];
-
+    string pos = s.substr(1);
+    reverse(pos);
+    cout << s[0];
 }
 int main()
-{  
-    string a="akash";
-    reverse(a);
-    
+{
+    string a = "akash";
+    // reverse(a);
+
+    int pos = a.find('s');
+    cout << a.substr(pos);
+    cout << pos << endl;
+
     return 0;
 }
