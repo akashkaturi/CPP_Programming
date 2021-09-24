@@ -23,7 +23,7 @@ int partition(int arr[], int l, int r)  //integer function because it returns th
         }
         
     }
-    swap(arr,i+1,r); // now we have to swap the pivot into the right position, i.e i+1th position will be swapped with pivot, and all the elements on the right side of the pivot will be greater than pivot.
+swap(arr,i+1,r); // now we have to swap the pivot into the right position, i.e i+1th position will be swapped with pivot, and all the elements on the right side of the pivot will be greater than pivot.
     return i+1; // this returns the pivot element to the quicksort algo.
 
 }
