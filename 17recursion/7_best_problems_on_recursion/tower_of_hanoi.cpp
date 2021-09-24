@@ -13,7 +13,7 @@ void towerofHanoi(int n, char src, char dest, char helper)
 }
 int main()
 {
-    towerofHanoi(5, 'A', 'C', 'B');
+    towerofHanoi(3, 'A', 'C', 'B');
 
     return 0;
 }

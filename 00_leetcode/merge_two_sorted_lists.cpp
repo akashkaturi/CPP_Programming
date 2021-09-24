@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void sortLists(int l1[], int l2[],int n1,int n2)
+void sortLists(int l1[], int l2[], int n1, int n2)
 {
 
     int i = 0, j = 0, k = 0;
@@ -45,8 +45,7 @@ int main()
     int arr2[5] = {2, 4, 6, 8, 10};
     int n1 = sizeof(arr1) / sizeof(arr1[0]);
     int n2 = sizeof(arr2) / sizeof(arr2[0]);
-    sortLists(arr1, arr2,n1,n2);
-  
+    sortLists(arr1, arr2, n1, n2);
 
     return 0;
 }
