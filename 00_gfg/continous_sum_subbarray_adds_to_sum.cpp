@@ -12,7 +12,7 @@ vector<int> find_target(vector<int> &v, int target)
     {
         int temp = target - v[i];
         if (m.find(temp) != m.end())
-        {
+    {
             ans.push_back(m[temp] + 1);
             ans.push_back(i + 1);
             return ans;
@@ -26,19 +26,23 @@ vector<int> find_target(vector<int> &v, int target)
 }
 int main()
 {
-    vector<int> v;
-    int n;
-    while (cin >> n)
-    {
-        v.push_back(n);
-    }
-    int target = 12;
-    vector<int> ans = find_target(v, target);
-    for (auto x : ans)
-    {
-        cout << x << " ";
-    }
-    return 0;
+    // vector<int> v;
+    // int n;
+    // while (cin >> n)
+    // {
+    //     v.push_back(n);
+    // }
+    // int target = 12;
+    // vector<int> ans = find_target(v, target);
+    // for (auto x : ans)
+    // {
+    //     cout << x << " ";
+    // }
+    string name;
+    cin>>name;
+    cout<<"Hey "<<name<<endl;
+     return 0;
+
 }
 
 /*
