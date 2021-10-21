@@ -10,7 +10,7 @@ int main()
         for(j=1;j<=i;j++){
             cout<<"*";
         }
-        int space=2*n-2*i;
+        int space=2*n-2*i; //8 spaces
         for(j=1;j<=space;j++){
             cout<<" ";
         }
