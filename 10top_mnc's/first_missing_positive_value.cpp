@@ -20,9 +20,9 @@ int main()
             idx[arr[i]]=1;
         }
     }
-    for(i=0;i<max_range;i++){
+    for(i=arr[0];i<max_range;i++){
         if(idx[i]==-1){
-            cout<<"Missing smallest positive number is: "<< i <<endl;
+            cout<<i <<endl;
             break;
         }
     }
