@@ -12,7 +12,6 @@ int fibbonacci(int n){
     }
     return 0;
 }
-
 int main()
 {
     int n;
