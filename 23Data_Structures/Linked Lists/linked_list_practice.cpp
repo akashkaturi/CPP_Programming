@@ -139,24 +139,25 @@ void delete_at_end(node *&head)
 node *reverse_k(node *head, int k)
 {
 
-    node *prev = NULL;
-    node *curr = head;
-    node *nextptr = NULL;
+    node *prevptr = NULL;
+    node *currptr = head;
+    node *nextptr;
     int count = 0;
-    while (curr != NULL && count < k)
+    while (currptr != NULL && count < k)
     {
-        nextptr = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = nextptr;
+        nextptr = currptr->next;
+        currptr->next = prevptr;
+        prevptr = currptr;
+        currptr = nextptr;
         count++;
     }
     if (nextptr != NULL)
     {
         head->next = reverse_k(nextptr, k);
     }
-    return prev;
+    return prevptr;
 }
+
 int length_of_linked_list(node *&head)
 {
     int count = 0;
@@ -313,12 +314,14 @@ int main()
     // display(head);
     // delete_at_end(head);
     // node *k = append_last_k_elements_in_linked_list(head, 5);
-    intersect(head, head2, 5);
-    display(head);
-    display(head2);
-    find_intersection(head, head2);
-    node *mer = merge_two_sorted_linked_lists(head, head2);
-    display(mer);
+    // intersect(head, head2, 5);
+    // display(head);
+    // display(head2);
+    // find_intersection(head, head2);
+    // node *mer = merge_two_sorted_linked_lists(head, head2);
+    // display(mer);
+    node *rev = reverse_k(head, 3);
+    display(rev);
     return 0;
 }
 

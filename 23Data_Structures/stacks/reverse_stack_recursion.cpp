@@ -1,25 +1,29 @@
-#include<iostream>
-#include<bits/stdc++.h>
-#include<stack>
+#include <iostream>
+#include <bits/stdc++.h>
+#include <stack>
 using namespace std;
-void insertAtBottom(stack<int> &st, int ele){
-    if(st.empty()){
+void insertAtBottom(stack<int> &st, int ele)
+{
+    if (st.empty())
+    {
         st.push(ele);
         return;
     }
-    int topele=st.top();
+    int topele = st.top();
     st.pop();
-    insertAtBottom(st,ele);
+    insertAtBottom(st, ele);
     st.push(topele);
 }
-void reverse(stack<int> &st){
-    if(st.empty()){
+void reverse(stack<int> &st)
+{
+    if (st.empty())
+    {
         return;
     }
-    int ele=st.top(); //
+    int ele = st.top(); //
     st.pop();
     reverse(st);
-    insertAtBottom(st,ele);
+    insertAtBottom(st, ele);
 }
 int main()
 {
@@ -31,9 +35,11 @@ int main()
     st.push(4);
     st.push(5);
     reverse(st);
-    while(!st.empty()){
-        cout<<st.top()<<" ";
+    while (!st.empty())
+    {
+        cout << st.top() << " ";
         st.pop();
-    }cout<<endl;
+    }
+    cout << endl;
     return 0;
 }
