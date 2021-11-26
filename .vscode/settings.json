@@ -102,5 +102,6 @@
 		"statusBarItem.remoteForeground": "#e7e7e7"
 	},
 	"peacock.color": "#215732",
-	"python.formatting.provider": "black"
+	"python.formatting.provider": "black",
+	"cmake.configureOnOpen": false
 }
