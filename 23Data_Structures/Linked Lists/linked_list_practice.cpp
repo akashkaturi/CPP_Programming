@@ -84,7 +84,7 @@ void remove_cycle(node *&head)
     }
     slow->next = NULL;
 }
-void middle_element(node *&head)
+node *middle_element(node *&head)
 {
     node *slow = head;
     node *fast = head;
@@ -93,7 +93,7 @@ void middle_element(node *&head)
         slow = slow->next;
         fast = fast->next->next;
     }
-    cout << slow->data << endl;
+    return slow;
 }
 node *reverse_linked_list(node *&head)
 {
@@ -265,6 +265,26 @@ node *merge_two_sorted_linked_lists(node *&head1, node *&head2)
     }
     return d->next;
 }
+bool isPalindrome(node *&head)
+{
+    if (head->next == NULL || head->next == NULL)
+    {
+        return true;
+    }
+    node *middle = middle_element(head);
+    node *second_half = reverse_linked_list(middle);
+    node *firsthalf = head;
+    while (second_half != NULL)
+    {
+        if (second_half->data != firsthalf->data)
+        {
+            return false;
+        }
+        second_half = second_half->next;
+        firsthalf = firsthalf->next;
+    }
+    return true;
+}
 void display(node *head)
 {
     if (head == NULL)
@@ -289,11 +309,11 @@ int main()
     insert_at_tail(head, 3);
     insert_at_tail(head, 4);
     insert_at_tail(head, 5);
-    insert_at_tail(head, 6);
-    insert_at_tail(head, 7);
-    insert_at_tail(head, 8);
-    insert_at_tail(head, 9);
-    insert_at_tail(head, 10);
+    // insert_at_tail(head, );
+    insert_at_tail(head, 4);
+    insert_at_tail(head, 3);
+    insert_at_tail(head, 2);
+    insert_at_tail(head, 1);
     node *head2 = NULL;
     insert_at_tail(head2, 6);
     insert_at_tail(head2, 7);
@@ -320,8 +340,9 @@ int main()
     // find_intersection(head, head2);
     // node *mer = merge_two_sorted_linked_lists(head, head2);
     // display(mer);
-    node *rev = reverse_k(head, 3);
-    display(rev);
+    // node *rev = reverse_k(head, 3);
+    cout << isPalindrome(head);
+    // display(rev);
     return 0;
 }
 
