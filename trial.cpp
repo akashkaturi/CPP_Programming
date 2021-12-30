@@ -1,17 +1,21 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+int dig(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    else if ((n % 10) == 3)
+    {
+        return 1 + dig(n / 10);
+    }
+    return dig(n / 10);
+}
 int main()
 {
-
-    int arr[] = {1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 6};
-    int sum = 0;
-    int n = sizeof(arr) / sizeof(arr[0]);
-    for (int i = 0; i < n; i++)
-    {
-        sum = sum ^ arr[i];
-    }
-    cout << sum;
+    cout << dig(13333);
     return 0;
 }
 

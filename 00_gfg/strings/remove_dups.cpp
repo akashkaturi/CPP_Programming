@@ -7,7 +7,6 @@ void remove_duplicates(string s)
     string ans = "";
     for (int i = 0; i < s.length(); i++)
     {
-
         if (map.find(s[i]) == map.end())
         {
             ans += s[i];

@@ -19,7 +19,7 @@ int height_of_tree(node *root)
 {
     if (root == NULL)
     {
-        return 0;   
+        return 0;
     }
     return max(height_of_tree(root->left) + 1, height_of_tree(root->right) + 1);
 }
