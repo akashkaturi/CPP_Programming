@@ -1,6 +1,23 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+string convertToRoman(int num)
+{
+    string romans[] = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
+    int nums[] = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
+    string result = "";
+    // int m = num;
+    int i = 12;
+    for (i = 12; i >= 0; i--)
+    {
+        while (num >= nums[i])
+        {
+            result = result + romans[i];
+            num = num - nums[i];
+        }
+    }
+    return result;
+}
 int value(char s)
 {
     if (s == 'I')
@@ -33,6 +50,7 @@ int value(char s)
     }
     return -1;
 }
+// adding/subtracting  until n-1th element in the string.
 int rom_to_decimal(string s)
 {
     int sum = 0;
@@ -48,6 +66,7 @@ int rom_to_decimal(string s)
             sum -= value(s[i]);
         }
     }
+    //Adding last element
     if (i == s.length() - 1)
     {
         sum += value(s[s.length() - 1]);
@@ -59,6 +78,7 @@ int main()
     string s;
     cin >> s;
     cout << rom_to_decimal(s) << endl;
+    cout << convertToRoman(8) << endl;
     return 0;
 }
 

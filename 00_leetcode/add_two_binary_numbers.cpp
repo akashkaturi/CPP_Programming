@@ -10,8 +10,8 @@ string add(string f, string s)
     int carr = 0;
     while (n1 >= 0 && n2 >= 0)
     {
-        sum += int(f[n1]) + int(f[n2])+carr;
-        if (sum <= 1 )
+        sum += int(f[n1]) + int(f[n2]) + carr;
+        if (sum <= 1)
         {
             ans += sum;
             n1--;
@@ -29,7 +29,7 @@ string add(string f, string s)
 }
 int main()
 {
-    string f,s;
+    string f, s;
     cin >> f >> s;
     cout << add(f, s);
     return 0;

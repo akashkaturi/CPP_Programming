@@ -11,7 +11,7 @@ int main()
     }
     cout << endl;
     it = find(v.begin(), v.end(), 2);
-    cout << it - v.begin() << endl;
+    cout << it -v.begin()<< endl;
     sort(v.begin(), v.end());
     for (auto x : v)
     {
