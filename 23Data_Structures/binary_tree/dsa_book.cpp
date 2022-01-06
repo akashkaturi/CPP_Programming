@@ -44,6 +44,39 @@ void post_order(node *head)
     post_order(head->right);
     cout << head->data << " ";
 }
+void level_order(node *&head)
+{
+    if (head == NULL)
+    {
+        return;
+    }
+    queue<node *> q;
+    q.push(head);
+    q.push(NULL);
+    while (!q.empty())
+    {
+        node *ele = q.front();
+        q.pop();
+
+        if (ele != NULL)
+        {
+            cout << ele->data << " ";
+
+            if (ele->left)
+            {
+                q.push(ele->left);
+            }
+            if (ele->right)
+            {
+                q.push(ele->right);
+            }
+            else if (!q.empty())
+            {
+                q.push(NULL);
+            }
+        }
+    }
+}
 int main()
 {
     node *head = new node(1);
@@ -62,6 +95,10 @@ int main()
     cout << endl;
     cout << "Post-order: ";
     post_order(head);
+    cout << endl;
+    cout << "Level Order: ";
+    level_order(head);
+    cout << endl;
     return 0;
 }
 
