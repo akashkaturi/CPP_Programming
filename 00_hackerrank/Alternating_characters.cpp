@@ -64,8 +64,6 @@ int alter(string s)
             comp = s[i];
             j++;
         }
-        
-        
     }
     return count;
 }
@@ -80,7 +78,7 @@ int main()
         cin >> s;
         cout << alter(s) << endl;
     }
-
+    cout << "hello ";
     return 0;
 }
 
