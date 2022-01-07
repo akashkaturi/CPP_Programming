@@ -77,6 +77,81 @@ void level_order(node *&head)
         }
     }
 }
+int sumAtKthLevel(node *&head, int k)
+{
+    if (head == NULL)
+    {
+        return -1;
+    }
+    queue<node *> q;
+    q.push(head);
+    q.push(NULL);
+    int sum = 0;
+    int level = 0;
+    while (!q.empty())
+    {
+        node *ele = q.front();
+        q.pop();
+        if (ele != NULL)
+        {
+            if (level == k)
+            {
+                sum += ele->data;
+            }
+            if (ele->left)
+            {
+                q.push(ele->left);
+            }
+            if (ele->right)
+                q.push(ele->right);
+        }
+        else if (!q.empty())
+        {
+            q.push(NULL);
+            level++;
+        }
+    }
+    return sum;
+}
+int count_nodes(node *head)
+{
+    if (head == NULL)
+    {
+        return 0;
+    }
+    return (count_nodes(head->left) + count_nodes(head->right) + 1);
+}
+int sum_of_all_nodes(node *&head)
+{
+    if (head == NULL)
+    {
+        return 0;
+    }
+    return (sum_of_all_nodes(head->left) + sum_of_all_nodes(head->right) + head->data);
+}
+int height(node *&head)
+{
+    if (head == NULL)
+    {
+        return 0;
+    }
+    int left = height(head->left);
+    int right = height(head->right);
+    return max(left, right) + 1;
+}
+int diameter_of_tree(node *&head)
+{
+    if (head == NULL)
+    {
+        return 0;
+    }
+    int left = height(head->left);
+    int right = height(head->right);
+    int curr_diameter = left + right+1;
+    int left_diameter = diameter_of_tree(head->left);
+    int right_diameter = diameter_of_tree(head->right);
+    return max(curr_diameter, max(left_diameter, right_diameter));
+}
 int main()
 {
     node *head = new node(1);
@@ -98,6 +173,21 @@ int main()
     cout << endl;
     cout << "Level Order: ";
     level_order(head);
+    cout << endl;
+    cout << "Sum at Kth Level: ";
+    cout << sumAtKthLevel(head, 1);
+    cout << endl;
+    cout << "No Of Nodes: ";
+    cout << count_nodes(head);
+    cout << endl;
+    cout << "Sum of all Nodes: ";
+    cout << sum_of_all_nodes(head);
+    cout << endl;
+    cout << "Height of a Tree: ";
+    cout << height(head);
+    cout << endl;
+    cout << "Diamter of a Tree: ";
+    cout << diameter_of_tree(head);
     cout << endl;
     return 0;
 }
