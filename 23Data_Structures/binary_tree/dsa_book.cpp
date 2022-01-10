@@ -147,10 +147,73 @@ int diameter_of_tree(node *&head)
     }
     int left = height(head->left);
     int right = height(head->right);
-    int curr_diameter = left + right+1;
+    int curr_diameter = left + right + 1;
     int left_diameter = diameter_of_tree(head->left);
     int right_diameter = diameter_of_tree(head->right);
     return max(curr_diameter, max(left_diameter, right_diameter));
+}
+bool isBalanced(node *&head)
+{
+    if (head == NULL)
+    {
+        return true;
+    }
+    if (isBalanced(head->left) == false)
+        return false;
+
+    if (isBalanced(head->right) == false)
+        return false;
+
+    int l = height(head->left);
+    int r = height(head->right);
+    if (abs(l - r) <= 1)
+    {
+        return true;
+    }
+    else
+        return false;
+}
+bool isBalanceOptimized(node *&head, int *height)
+{
+    if (head == NULL)
+    {
+        return true;
+    }
+    int lh = 0, rh = 0;
+    if (isBalanceOptimized(head, &lh) == false)
+    {
+        return false;
+    }
+    if (isBalanceOptimized(head, &rh) == false)
+    {
+        return false;
+    }
+    *height = max(lh, rh) + 1;
+    if (abs(lh - rh) <= 1)
+    {
+        return true;
+    }
+    else
+        return false;
+}
+void sumReplace(node *&head)
+{
+    if (head == NULL)
+    {
+        return;
+    }
+    sumReplace(head->left);
+    sumReplace(head->right);
+
+    if (head->left != NULL)
+    {
+        head->data += head->left->data;
+    }
+    if (head->right != NULL)
+    {
+        head->data += head->right->data;
+    }
+    cout << head->data << " ";
 }
 int main()
 {
@@ -188,6 +251,16 @@ int main()
     cout << endl;
     cout << "Diamter of a Tree: ";
     cout << diameter_of_tree(head);
+    cout << endl;
+    // cout << "Balanced or Not: ";
+    // cout << isBalanced(head);
+    // cout << endl;
+    // int height = 0;
+    // cout << "Balanced Tree Optimized Version: ";
+    // cout << isBalanceOptimized(head, &height);
+    // cout << endl;
+    cout << "Sum Replacement Order: ";
+    sumReplace(head);
     cout << endl;
     return 0;
 }
