@@ -47,6 +47,36 @@ void level_order(node *&head)
         }
     }
 }
+void rightView(node *&head)
+{
+    if (head == NULL)
+    {
+        return;
+    }
+    queue<node *> q;
+    q.push(head);
+    while (!q.empty())
+    {
+        int n = q.size();
+        for (int i = 0; i < n; i++)
+        {
+            node *curr = q.front();
+            q.pop();
+            if (i == n - 1)
+            {
+                cout << curr->data << " ";
+            }
+            if (curr->left != NULL)
+            {
+                q.push(curr->left);
+            }
+            if (curr->right != NULL)
+            {
+                q.push(curr->right);
+            }
+        }
+    }
+}
 int main()
 {
     node *head = new node(1);
@@ -57,6 +87,8 @@ int main()
     head->right->left = new node(6);
     head->right->left = new node(7);
     level_order(head);
+    cout << endl;
+    rightView(head);
     return 0;
 }
 
