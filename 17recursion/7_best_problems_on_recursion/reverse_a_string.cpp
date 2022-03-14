@@ -15,11 +15,11 @@ void reverse(string s)
 int main()
 {
     string a = "akash";
-    // reverse(a);
+    reverse(a);
 
-    int pos = a.find('s');
-    cout << a.substr(pos);
-    cout << pos << endl;
+    // int pos = a.find('s');
+    // cout << a.substr(pos);
+    // cout << pos << endl;
 
     return 0;
 }
