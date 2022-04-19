@@ -1,0 +1,1 @@
+{"name":"Local: proglang","url":"e:\\100days of coding\\CPP_Programming\\0_CodeChef Problems\\proglang.cpp","tests":[{"id":1649853685585,"input":"3\n1 2 2 1 3 4\n3 4 2 1 4 3\n1 2 1 3 2 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\100days of coding\\CPP_Programming\\0_CodeChef Problems\\proglang.cpp","group":"local","local":true}

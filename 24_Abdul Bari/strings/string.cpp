@@ -141,14 +141,25 @@ void check_two_strings_are_anagram(string s1, string s2)
     }
     cout << "10A. The two strings are not anagram." << endl;
 }
-void anagrams(string s1,string s2){
-    
+void anagrams(string s1, string s2)
+{
 }
-void permutations(string s){
-    if(s.length()==0){
+void permutations(string s, int l, int h)
+{
+    if (l == h)
+    {
+        cout << s << endl;
         return;
     }
-    char c = s[0];
+    else
+    {
+        for (int i = l; i <= h; i++)
+        {
+            swap(s[i], s[l]);
+            permutations(s, l + 1, h);
+            swap(s[l], s[i]);
+        }
+    }
 }
 int main()
 {
@@ -166,6 +177,7 @@ int main()
     cout << "10. check_two_strings_are_anagram(s)" << endl;
     cout << endl;
     check_two_strings_are_anagram("akashkaturi", "katuriakash");
+    permutations("abc", 0, 2);
     cout << endl;
     return 0;
 }
