@@ -109,5 +109,7 @@
 	},
 	"peacock.color": "#1857a4",
 	"python.formatting.provider": "black",
-	"cmake.configureOnOpen": false
+	"cmake.configureOnOpen": false,
+	"python.linting.pylintEnabled": true,
+	"python.linting.enabled": true
 }
