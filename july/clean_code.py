@@ -2,7 +2,6 @@
 Clean Code 
 """
 
-
 class Code:
     """
     writing clean code
