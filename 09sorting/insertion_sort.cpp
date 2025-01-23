@@ -14,7 +14,9 @@ int main()
     {
         current = arr[i];                  //first element
         int j = i - 1;                     //pointer to 0th element
-        while (arr[j] > current && j >= 0) // while jth element is smaller than the current element this loop happens and if j=-1 then the checking is done until the first element from the back.
+        while (arr[j] > current && j >= 0) 
+        // while jth element is smaller than the current element this loop happens 
+        // and if j=-1 then the checking is done until the first element from the back.
         {
             /* 
             if the arr[j]th element is greater than current then we have to shift jth element to j+1th element
